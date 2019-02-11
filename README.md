@@ -3,6 +3,7 @@
 - [Fast switch](#fast-switch)
   * [git](#git)
   * [cd](#cd)
+- [Get global ip](#get-global-ip)
   
 ## Fast switch
 
@@ -33,4 +34,13 @@ $ cd - # Switch to previous
 /
 $ cd -
 /tmp
+```
+
+## Get global ip
+
+```bash
+$ curl ifconfig.co # IPv4
+50.110.14.21
+$ curl -6 ifconfig.co # IPv6
+2010:3f3f:113f:0:ea57:4497:7291:e422
 ```
