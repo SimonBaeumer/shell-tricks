@@ -4,6 +4,11 @@
   * [git](#git)
   * [cd](#cd)
 - [Get global ip](#get-global-ip)
+- [Simple commands](#simple-commands)
+- [Loop](#loop)
+- [Reuse arguments](#reuse-arguments)
+- [Reuse commands](#reuse-commands)
+- [Accept interactive commands](#accept-interactive-commands)
   
 ## Fast switch
 
@@ -50,9 +55,9 @@ $ curl -6 ifconfig.co # IPv6
 ```bash
 #!/usr/bin/env bash
 
-function test () { echo "test"; }
+function test () { echo "called test function" }
 
-function command() { echo "command" }
+function command() { echo "called command function" }
 
 case $1 in
     test|command) $1 ;;
@@ -71,3 +76,38 @@ called test function
 ```bash
 $ for i in {1..10}; do echo $i; done
 ```
+
+## Reuse arguments
+
+```bash
+$ ls /tmp
+some_file.txt some_archive.tar.gz
+$ cd !$
+/tmp
+```
+
+## Reuse commands
+
+```$bash
+$ echo "reuse me"
+reuse me
+$ !!
+echo "reuse me"
+reuse me
+```
+
+## Accept interactive commands
+
+```bash
+yes | ./interactive-command.sh
+Are you sure (y/n)
+Accepted
+yes: standard output: Broken pipe
+```
+
+The error message is printed because `yes` gets killed by `SIGPIPE` signal. This happens
+if the pipe to `./interactive-command.sh` gets closed but `yes` still wants to write into it.
+
+Ignore error message:
+
+`yes 2>/dev/null | ./interactive-command.sh`
