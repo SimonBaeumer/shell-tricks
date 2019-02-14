@@ -9,6 +9,7 @@
 - [Reuse arguments](#reuse-arguments)
 - [Reuse commands](#reuse-commands)
 - [Accept interactive commands](#accept-interactive-commands)
+- [Last exit code](#last-exit-code)
   
 ## Fast switch
 
@@ -111,3 +112,12 @@ if the pipe to `./interactive-command.sh` gets closed but `yes` still wants to w
 Ignore error message:
 
 `yes 2>/dev/null | ./interactive-command.sh`
+
+## Last exit code
+
+```bash
+$ ls /tmp
+some_file.txt
+$ echo $?
+0
+```
