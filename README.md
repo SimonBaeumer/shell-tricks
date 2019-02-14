@@ -1,6 +1,6 @@
 # Bash tricks
 
-- [Fast switch](#fast-switch)
+- [Switch to previous directory](#switch-to-previous-directory)
   * [git](#git)
   * [cd](#cd)
 - [Get global ip](#get-global-ip)
@@ -11,7 +11,7 @@
 - [Accept interactive commands](#accept-interactive-commands)
 - [Last exit code](#last-exit-code)
   
-## Fast switch
+## Switch to previous directory
 
 Switch between the current and previous branch / directory.
 
