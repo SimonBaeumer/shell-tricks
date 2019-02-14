@@ -100,7 +100,7 @@ reuse me
 ## Accept interactive commands
 
 ```bash
-yes | ./interactive-command.sh
+$ yes | ./interactive-command.sh
 Are you sure (y/n)
 Accepted
 yes: standard output: Broken pipe
@@ -111,7 +111,7 @@ if the pipe to `./interactive-command.sh` gets closed but `yes` still wants to w
 
 Ignore error message:
 
-`yes 2>/dev/null | ./interactive-command.sh`
+`$ yes 2>/dev/null | ./interactive-command.sh`
 
 ## Last exit code
 
