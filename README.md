@@ -44,3 +44,30 @@ $ curl ifconfig.co # IPv4
 $ curl -6 ifconfig.co # IPv6
 2010:3f3f:113f:0:ea57:4497:7291:e422
 ```
+
+## Simple commands
+
+```bash
+#!/usr/bin/env bash
+
+function test () { echo "test"; }
+
+function command() { echo "command" }
+
+case $1 in
+    test|command) $1 ;;
+esac
+```
+
+Execute it:
+
+```bash
+$ ./simple-commands.sh test
+called test function
+```
+
+## Loop
+
+```bash
+$ for i in {1..10}; do echo $i; done
+```
