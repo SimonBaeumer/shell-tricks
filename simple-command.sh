@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-function test () { echo "test"; }
+function test () { echo "call test function"; }
 
-function command() { echo "command" }
+function command() { echo "call command function" }
 
 case $1 in
     test|command) $1 ;;
