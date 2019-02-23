@@ -8,8 +8,10 @@
 - [Loop](#loop)
 - [Reuse arguments](#reuse-arguments)
 - [Reuse commands](#reuse-commands)
+- [Fix last command](#fix-last-command)
 - [Accept interactive commands](#accept-interactive-commands)
 - [Last exit code](#last-exit-code)
+- [Easy backup](#easy-backup)
   
 ## Switch to previous directory
 
@@ -93,12 +95,21 @@ $ cd !$
 
 ## Reuse commands
 
-```$bash
+```bash
 $ echo "reuse me"
 reuse me
 $ !!
 echo "reuse me"
 reuse me
+```
+
+## Fix last command
+
+```bash
+$ ehco foo bar bar
+bash: ehco: command not found
+$ ^ehco^echo   
+foo bar baz 
 ```
 
 ## Accept interactive commands
@@ -124,4 +135,13 @@ $ ls /tmp
 some_file.txt
 $ echo $?
 0
+```
+
+## Easy backup
+
+```bash
+$ cp file.txt{,.bak}
+$ ls -1
+file.txt
+file.txt.bak
 ```
