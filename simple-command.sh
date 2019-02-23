@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 
-function test () { echo "call test function"; }
+function do_this () { echo "call do_this function"; }
 
-function command() { echo "call command function" }
+function do_sth() { echo "call do_sth function"; }
 
-case $1 in
-    test|command) $1 ;;
+case "$1" in
+    do_this|do_sth) "$1" ;;
+    *) echo "Given argument does not exist"; exit 1;
 esac

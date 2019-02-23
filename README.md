@@ -13,7 +13,7 @@
   
 ## Switch to previous directory
 
-Switch between the current and previous branch / directory.
+Switch between the current and previous branch / directory. 
 
 ### git
 
@@ -53,29 +53,33 @@ $ curl -6 ifconfig.co # IPv6
 
 ## Simple commands
 
+Create a script which calls functions by its` first argument. This is very useful to create simple scripts which could be a wrapper for other commands.
+
 ```bash
 #!/usr/bin/env bash
 
-function test () { echo "called test function" }
+function do_this () { echo "call do_this function"; }
 
-function command() { echo "called command function" }
+function do_sth() { echo "call do_sth function" }
 
-case $1 in
-    test|command) $1 ;;
+case "$1" in
+    do_this|do_sth) "$1" ;;
 esac
 ```
 
 Execute it:
 
 ```bash
-$ ./simple-commands.sh test
-called test function
+$ ./simple-commands.sh do_this
+call do_this function
 ```
 
 ## Loop
 
+Write simple one liner loops if you need to do some batch tasks.
+
 ```bash
-$ for i in {1..10}; do echo $i; done
+$ for i in {1..10}; do echo "$i"; done
 ```
 
 ## Reuse arguments
