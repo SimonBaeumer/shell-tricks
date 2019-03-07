@@ -12,6 +12,7 @@
 - [Accept interactive commands](#accept-interactive-commands)
 - [Last exit code](#last-exit-code)
 - [Easy backup](#easy-backup)
+- [Print to stderr](#print-to-stderr)
   
 ## Switch to previous directory
 
@@ -144,4 +145,11 @@ $ cp file.txt{,.bak}
 $ ls -1
 file.txt
 file.txt.bak
+```
+
+## Print to stderr
+
+```
+$ >&2 echo hello
+hello
 ```
