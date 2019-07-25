@@ -157,7 +157,7 @@ hello
 
 ## Debugging
 
-Add `-vx` to your bash scripts, i.e.:
+Add `-xv` to your bash scripts, i.e.:
 
 ```
 /usr/bin/env bash
