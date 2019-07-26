@@ -13,6 +13,7 @@
 - [Last exit code](#last-exit-code)
 - [Easy backup](#easy-backup)
 - [Print to stderr](#print-to-stderr)
+- [Debugging](#debugging)
   
 ## Switch to previous directory
 
@@ -153,3 +154,14 @@ file.txt.bak
 $ >&2 echo hello
 hello
 ```
+
+## Debugging
+
+Add `-xv` to your bash scripts, i.e.:
+
+```
+/usr/bin/env bash
+set -xv
+```
+
+or `/bin/bash -xv script.sh`
