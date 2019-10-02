@@ -86,6 +86,40 @@ Write simple one liner loops if you need to do some batch tasks.
 $ for i in {1..10}; do echo "$i"; done
 ```
 
+## Sequences of letters or numbers
+
+Brace expansion is great for lots of things.
+
+``` bash
+$ touch file{a..c}
+$ ls
+$ command ls
+filea fileb filec
+```
+
+``` bash
+$ touch file-{1..15}
+$ ls
+file-1	file-10	file-11	file-12	file-13	file-14	file-15	file-2	file-3	file-4	file-5	file-6	file-7	file-8	file-9
+$ ls file-{9..12}
+file-10	file-11	file-12	file-9
+```
+
+``` bash
+$ printf "%s\n" file-{a..c}{1..3}
+file-a1
+file-a2
+file-a3
+file-b1
+file-b2
+file-b3
+file-c1
+file-c2
+file-c3
+```
+
+(If you give `printf` more arguments than it expects, it automatically loops.)
+
 ## Reuse arguments
 
 ```bash
@@ -165,3 +199,11 @@ set -xv
 ```
 
 or `/bin/bash -xv script.sh`
+
+## Useful `readline` tricks
+
+If you use the standard `bash` `readline` bindings.
+
+- `C-a` (aka `CTRL+A`) move cursor to beginning of line
+- `C-e` (aka `CTRL+E`) move cursor to end of line
+- `M-.` (aka `ALT+.`)  insert last argument of previous command (like `!$`, but you can edit it)
