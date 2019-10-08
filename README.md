@@ -6,6 +6,7 @@
 - [Get global ip](#get-global-ip)
 - [Simple commands](#simple-commands)
 - [Loop](#loop)
+- [Sequences of letters or numbers](#sequences-of-letters-or-numbers)
 - [Reuse arguments](#reuse-arguments)
 - [Reuse commands](#reuse-commands)
 - [Fix last command](#fix-last-command)
@@ -14,6 +15,7 @@
 - [Easy backup](#easy-backup)
 - [Print to stderr](#print-to-stderr)
 - [Debugging](#debugging)
+- [Useful readline tricks](#useful-readline-tricks)
   
 ## Switch to previous directory
 
