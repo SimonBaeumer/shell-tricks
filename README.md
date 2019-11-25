@@ -16,6 +16,7 @@
 - [Print to stderr](#print-to-stderr)
 - [Debugging](#debugging)
 - [Useful readline tricks](#useful-readline-tricks)
+- [Repeat command](#repeat-command)
   
 ## Switch to previous directory
 
@@ -209,3 +210,10 @@ If you use the standard `bash` `readline` bindings.
 - `C-a` (aka `CTRL+A`) move cursor to beginning of line
 - `C-e` (aka `CTRL+E`) move cursor to end of line
 - `M-.` (aka `ALT+.`)  insert last argument of previous command (like `!$`, but you can edit it)
+
+## Repeat command
+
+Execute a command every two seconds and monitor its` output.
+This is especially useful for waiting until a deployment or infrastructure provisioning is completed, i.e. on aws.
+
+`watch -n2 echo hello`
