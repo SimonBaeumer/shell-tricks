@@ -223,20 +223,20 @@ This is especially useful for waiting until a deployment or infrastructure provi
 ## Substrings
 
 ```
-$a="apple orange"
+$ a="apple orange"
 
-$echo ${a#* }
+$ echo ${a#* }
 orange
-$echo ${a#*p}
+$ echo ${a#*p}
 ple orange
-$echo ${a##*p}
+$ echo ${a##*p}
 le orange
 
-$echo ${a% *}
+$ echo ${a% *}
 apple
-$echo ${a%p*}
+$ echo ${a%p*}
 ap
-$echo ${a%%p*}
+$ echo ${a%%p*}
 a
 ```
 The # for finding first occurence from the start and % for the first occurence from the end. * for matching any pattern. For greedy matching ## and %%. 
