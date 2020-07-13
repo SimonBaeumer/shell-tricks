@@ -17,6 +17,7 @@
 - [Debugging](#debugging)
 - [Useful readline tricks](#useful-readline-tricks)
 - [Repeat command](#repeat-command)
+- [More resources](#more-resources)
   
 ## Switch to previous directory
 
@@ -217,3 +218,8 @@ Execute a command every two seconds and monitor its` output.
 This is especially useful for waiting until a deployment or infrastructure provisioning is completed, i.e. on aws.
 
 `watch -n2 echo hello`
+
+
+## More resources
+
+ - [BashFAQ](https://mywiki.wooledge.org/BashFAQ) - A full FAQ of useful stuff
