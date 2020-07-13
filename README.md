@@ -1,4 +1,4 @@
-# Bash tricks
+# Shell tricks
 
 - [Switch to previous directory](#switch-to-previous-directory)
   * [git](#git)
