@@ -17,6 +17,7 @@
 - [Debugging](#debugging)
 - [Useful readline tricks](#useful-readline-tricks)
 - [Repeat command](#repeat-command)
+- [Substrings](#substrings)
 - [More resources](#more-resources)
   
 ## Switch to previous directory
@@ -218,7 +219,27 @@ Execute a command every two seconds and monitor its` output.
 This is especially useful for waiting until a deployment or infrastructure provisioning is completed, i.e. on aws.
 
 `watch -n2 echo hello`
+`
+## Substrings
 
+```
+$ a="apple orange"
+
+$ echo ${a#* }
+orange
+$ echo ${a#*p}
+ple orange
+$ echo ${a##*p}
+le orange
+
+$ echo ${a% *}
+apple
+$ echo ${a%p*}
+ap
+$ echo ${a%%p*}
+a
+```
+The # for finding first occurence from the start and % for the first occurence from the end. * for matching any pattern. For greedy matching ## and %%. 
 
 ## More resources
 
