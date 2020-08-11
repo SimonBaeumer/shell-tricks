@@ -89,6 +89,9 @@ Write simple one liner loops if you need to do some batch tasks.
 
 ```bash
 $ for i in {1..10}; do echo "$i"; done
+
+# List disk usage by directories
+$ for file in */ .*/ ; do du -sh $file; done
 ```
 
 ## Sequences of letters or numbers
