@@ -6,9 +6,11 @@
 - [Get global ip](#get-global-ip)
 - [Simple commands](#simple-commands)
 - [Loop](#loop)
+- [Loop with specified increment each iteration](#loop-with-specified-increment-each-iteration)
 - [Sequences of letters or numbers](#sequences-of-letters-or-numbers)
 - [Reuse arguments](#reuse-arguments)
 - [Reuse commands](#reuse-commands)
+- [Compare output of two commands](#compare-output-of-two-commands)
 - [Fix last command](#fix-last-command)
 - [Accept interactive commands](#accept-interactive-commands)
 - [Last exit code](#last-exit-code)
@@ -94,6 +96,17 @@ $ for i in {1..10}; do echo "$i"; done
 $ for file in */ .*/ ; do du -sh $file; done
 ```
 
+## Loop with specified increment each iteration
+
+```bash
+for i in {1..100..2}; do echo $i; done
+1
+3
+5
+7
+...
+```
+
 ## Sequences of letters or numbers
 
 Brace expansion is great for lots of things.
@@ -145,6 +158,15 @@ reuse me
 $ !!
 echo "reuse me"
 reuse me
+```
+
+## Compare output of two commands
+```bash
+diff <(echo "1 2 4") <(echo "1 2 3 4")
+1c1
+< 1 2 4
+---
+ > 1 2 3 4
 ```
 
 ## Fix last command
