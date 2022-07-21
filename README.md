@@ -20,6 +20,7 @@
 - [Useful readline tricks](#useful-readline-tricks)
 - [Repeat command](#repeat-command)
 - [Substrings](#substrings)
+- [Parallelism](#parallelism)
 - [More resources](#more-resources)
   
 ## Switch to previous directory
@@ -244,7 +245,37 @@ Execute a command every two seconds and monitor its` output.
 This is especially useful for waiting until a deployment or infrastructure provisioning is completed, i.e. on aws.
 
 `watch -n2 echo hello`
-`
+
+## Parallelism
+
+### Run everything at once
+
+```
+task(){
+   sleep 0.5; echo "$1";
+}
+
+for thing in a b c d e f g; do 
+  task "$thing" &
+done
+```
+
+### Run N tasks in parallel
+
+```
+task(){
+   sleep 0.5; echo "$1";
+}
+
+N=4
+(
+for thing in a b c d e f g; do 
+   ((i=i%N)); ((i++==0)) && wait
+   task "$thing" & 
+done
+)
+```
+
 ## Substrings
 
 ```
